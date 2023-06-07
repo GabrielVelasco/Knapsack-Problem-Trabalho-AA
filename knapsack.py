@@ -81,13 +81,11 @@ def _verify(weights, values, capacity, n, memo, my_ans):
     # run the 3 algorithms with the same input
     # if they return the same ans as mine then it may be right...
 
-    # ans1 = knapsack_recursive(weights, values, capacity, n)
-    # ans2 = knapsack_memoization(weights, values, capacity, n, memo)
-    # ans3 = knapsack_dynamic(weights, values, capacity, n)
+    ans1 = knapsack_recursive(weights, values, capacity, n)
+    ans2 = knapsack_memoization(weights, values, capacity, n, memo)
+    ans3 = knapsack_dynamic(weights, values, capacity, n)
 
-    # return (ans1 == my_ans) and (ans2 == my_ans) and (ans3 == my_ans)
-
-    return True
+    return (ans1 == my_ans) and (ans2 == my_ans) and (ans3 == my_ans)
 
 def run_knapsack(weights, values):
     capacity = 100
